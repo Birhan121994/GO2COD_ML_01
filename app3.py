@@ -188,7 +188,7 @@ if selected == "Quiz app":
             st.session_state.questions_asked = []
             st.session_state.current_question_index = 0
             st.session_state.questions = [generate_random_question() for _ in range(5)]  # Regenerate questions
-            st.experimental_rerun()
+            st.rerun()
         # Create a DataFrame for charting results
         results = pd.DataFrame(st.session_state.questions_asked, columns=["Question", "Your Answer", "Correct Answer"])
         # pr = ProfileReport(df, explorative=True)
