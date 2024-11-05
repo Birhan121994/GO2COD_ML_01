@@ -151,7 +151,7 @@ def ask_question(question_data):
             
             # Move to the next question
             st.session_state.current_question_index += 1
-            st.experimental_rerun()  # Rerun to show the next question
+            st.rerun()  # Rerun to show the next question
         else:
             st.warning("Please draw your answer before submitting.")
 
