@@ -11,10 +11,6 @@ import seaborn as sns
 import threading
 from streamlit_option_menu import option_menu
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras import backend as K
-
-# Clear any existing Keras sessions (helps avoid conflicts with name scopes)
-K.clear_session()
 
 im = Image.open('assets/crafto-landing-page-features-ico-05.png')
 st.set_page_config(page_title="HDR App (Handwritten Digit Recognition App)", page_icon = im)
