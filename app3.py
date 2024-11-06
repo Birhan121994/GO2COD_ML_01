@@ -17,11 +17,7 @@ st.set_page_config(page_title="HDR App (Handwritten Digit Recognition App)", pag
 
 # Load the trained model
 model = tf.keras.models.load_model('OCR_MODEL/OCR_MODEL_1.h5')
-model.compile(
-    optimizer='adam',
-    loss='categorical_crossentropy',
-    metrics=['accuracy']
-)
+
 st.sidebar.image('assets/crafto-landing-page-img-05.png', width=300)
 
 st.write("<style>.css-18ni7ap{display:none;}</style>", unsafe_allow_html=True)
