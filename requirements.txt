@@ -7,5 +7,5 @@ seaborn
 streamlit
 streamlit_drawable_canvas
 streamlit_option_menu
-tensorflow
+tensorflow==2.18.0
 
