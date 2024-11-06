@@ -16,7 +16,7 @@ im = Image.open('assets/crafto-landing-page-features-ico-05.png')
 st.set_page_config(page_title="HDR App (Handwritten Digit Recognition App)", page_icon = im)
 
 # Load the trained model
-model = tf.keras.models.load_model('OCR_MODEL/OCR_MODEL_1.h5', compile=False)
+model = tf.keras.models.load_model('OCR_MODEL/OCR_KERAS_MODEL_3.keras')
 
 st.sidebar.image('assets/crafto-landing-page-img-05.png', width=300)
 
