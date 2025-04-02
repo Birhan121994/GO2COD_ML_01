@@ -1,0 +1,194 @@
+/* Main styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header styles */
+.hero-section {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Feature cards */
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4b8eff;
+}
+
+/* Quiz styles */
+.question-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.canvas-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.instructions {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #4b8eff;
+}
+
+/* Prediction results */
+.prediction-result {
+    margin-top: 1.5rem;
+}
+
+.prediction-box {
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.high-confidence {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border-left: 4px solid #28a745;
+}
+
+.medium-confidence {
+    background: linear-gradient(135deg, #fff3cd, #ffeeba);
+    border-left: 4px solid #ffc107;
+}
+
+.low-confidence {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    border-left: 4px solid #dc3545;
+}
+
+.predicted-digit {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+}
+
+.confidence {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Quiz completion */
+.quiz-complete {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.final-score {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.final-score span {
+    font-size: 2rem;
+    color: #4b8eff;
+}
+
+/* Tech stack display */
+.tech-stack {
+    margin: 1.5rem 0;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-icon {
+    background: #e9ecef;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Documentation styles */
+.doc-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.doc-section {
+    padding: 1rem;
+}
+
+.tech-badge {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Sidebar styles */
+.sidebar-header {
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-header h3 {
+    margin-bottom: 0.2rem;
+    color: #4b8eff;
+}
+
+.sidebar-header p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
