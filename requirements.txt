@@ -1,6 +1,7 @@
 matplotlib
 numpy
 opencv_python
+opencv-python-headless
 pandas
 Pillow
 seaborn
