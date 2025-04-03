@@ -406,13 +406,7 @@ import seaborn as sns
 from streamlit_option_menu import option_menu
 from tensorflow.keras.preprocessing import image
 
-# Custom CSS for enhanced UI
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-# Load custom CSS
-local_css("styles.css")
 
 # App Configuration
 im = Image.open('assets/crafto-landing-page-features-ico-05.png')
@@ -422,6 +416,14 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Custom CSS for enhanced UI
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+# Load custom CSS
+local_css("assets/style.css")
 
 # Load the trained model
 @st.cache_resource
@@ -704,14 +706,24 @@ elif selected == "Math Quiz":
         col1, col2 = st.columns([1, 1], gap="large")
         
         with col1:
+            def highlight_correct(row):
+                if row['Your Answer'] == row['Correct Answer']:
+                    return ['background-color: #d4edda'] * len(row)
+                else:
+                    return ['background-color: #f8d7da'] * len(row)
+
             st.dataframe(
-                results.style.applymap(
-                    lambda x: 'background-color: #d4edda' if x == results['Correct Answer'].iloc[results.index.get_loc(x)] 
-                    else 'background-color: #f8d7da', 
-                    subset=['Your Answer', 'Correct Answer']
-                ),
+                results.style.apply(highlight_correct, axis=1),
                 use_container_width=True
-            )
+)
+            # st.dataframe(
+            #     results.style.applymap(
+            #         lambda x: 'background-color: #d4edda' if x == results['Correct Answer'].iloc[results.index.get_loc(x)] 
+            #         else 'background-color: #f8d7da', 
+            #         subset=['Your Answer', 'Correct Answer']
+            #     ),
+            #     use_container_width=True
+            # )
         
         with col2:
             correct_count = results[results["Your Answer"] == results["Correct Answer"]].shape[0]
