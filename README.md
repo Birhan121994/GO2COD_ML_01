@@ -1,3 +1,4 @@
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://digitquizai.streamlit.app)
 ## App Overview
 This app allows users to:
 - **Recognize handwritten digits** using an AI model trained on the MNIST dataset.
